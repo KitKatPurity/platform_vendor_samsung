@@ -1,4 +1,4 @@
-# Copyright 2012 The Android Open Source Project
+# Copyright 2012 The ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_STEM := manta/BoardConfigPartial.mk
-
--include vendor/audience/$(LOCAL_STEM)
--include vendor/broadcom/$(LOCAL_STEM)
--include vendor/samsung/$(LOCAL_STEM)
--include vendor/widevine/$(LOCAL_STEM)
+# Broadcom blob(s) necessary for Manta hardware
+PRODUCT_PACKAGES := \
+    bcm2079x_firmware \
+    bcm2079x_pre_firmware \
+    bcm43241

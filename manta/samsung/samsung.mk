@@ -1,4 +1,4 @@
-# Copyright 2012 The Android Open Source Project
+# Copyright 2013 The ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,3 +11,22 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Samsung blob(s) necessary for manta hardware
+PRODUCT_PACKAGES := \
+    fimc_is_fw \
+    fimc_is_fw2 \
+    mfc_fw \
+    maxtouch \
+    setfile \
+    setfile_4e5 \
+    setfile_6a3 \
+    00060308060501020000000000000000 \
+    020a0000000000000000000000000000 \
+    07060000000000000000000000000000 \
+    ffffffff000000000000000000000005 \
+    libGLES_mali \
+    libdrmdecrypt \
+    libmalicore \
+    libRSDriverArm \
+    libstagefright_hdcp

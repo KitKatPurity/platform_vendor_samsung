@@ -1,4 +1,4 @@
-# Copyright 2012 The Android Open Source Project
+# Copyright 2012 The ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,11 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_STEM := manta/device-partial.mk
-
-$(call inherit-product-if-exists, vendor/audience/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/broadcom/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/samsung/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/widevine/$(LOCAL_STEM))
-
-PRODUCT_RESTRICT_VENDOR_FILES := owner
+# Call makefiles
+$(call inherit-product-if-exists, vendor/samsung/manta/audience/audience.mk)
+$(call inherit-product-if-exists, vendor/samsung/manta/broadcom/broadcom.mk)
+$(call inherit-product-if-exists, vendor/samsung/manta/samsung/samsung.mk)
+$(call inherit-product-if-exists, vendor/samsung/manta/widevine/widevine.mk)
